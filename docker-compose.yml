@@ -1,0 +1,12 @@
+elk:
+  image: sebp/elk
+  volumes: 
+    - ./logstash-conf:/etc/logstash/conf.d
+    - ./elasticsearch.jvm.options:/opt/elasticsearch/config/jvm.options
+    - ./logstash.jvm.options:/opt/logstash/config/jvm.options
+  ports:
+    - "5601:5601"
+    - "9200:9200"
+    - "5044:5044"
+    - "5140:5140/udp"
+    - "5140:5140"
