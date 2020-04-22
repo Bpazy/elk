@@ -1,8 +1,8 @@
 elk:
   image: sebp/elk
   environment:
-    - ES_CONNECT_RETRY: 60
-    - TZ: "Asia/Shanghai"
+    - "ES_CONNECT_RETRY=60"
+    - "TZ=Asia/Shanghai"
   volumes: 
     - ./logstash-conf:/etc/logstash/conf.d
     - ./elasticsearch.jvm.options:/opt/elasticsearch/config/jvm.options
