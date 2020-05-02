@@ -5,8 +5,8 @@ elk:
     - "TZ=Asia/Shanghai"
   volumes: 
     - ./logstash-conf:/etc/logstash/conf.d
-    - ./elasticsearch.jvm.options:/opt/elasticsearch/config/jvm.options
-    - ./logstash.jvm.options:/opt/logstash/config/jvm.options
+    - ./elasticsearch/jvm.options:/opt/elasticsearch/config/jvm.options
+    - ./logstash/jvm.options:/opt/logstash/config/jvm.options
   ports:
     - "5601:5601"
     - "9200:9200"
